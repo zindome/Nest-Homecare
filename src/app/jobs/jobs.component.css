@@ -1,0 +1,67 @@
+.fa-check-circle{
+    color: rgb(0, 207, 104);
+  }
+  .info {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  
+  
+    
+  }
+  .none-bullet {
+    list-style: none;
+  }
+  h2 {
+    color: salmon;
+  }
+  small {
+    font-weight: 300;
+  }
+  .lead {
+    font-size: 0.9rem;
+    color: gray;
+    margin-top: 10px;
+  }
+  .fa-file-alt, .fa-line, .fa-medkit{
+    color: #1e90ff;
+    margin-bottom: 10px;
+  }
+  .fig{
+    color: #1e90ff;
+  }
+  .bg-overlay {
+    background-image: url(../../assets/regist-caregiver.jpg)  ;
+    background-color: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    background-position: center;
+    background-size: cover;
+    height: 550px;
+    width: 100%;
+    position: relative;
+  }
+  .banner {
+    background: linear-gradient(to right,  rgb(30, 143, 255) ,  rgba(30, 143, 255, 0.3)) ;
+    color: white;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+  }
+  .subtitle {
+    color: white;
+  }
+  .btn-form {
+    background-color: #1e90ff;
+    color: white;
+    border-radius: 50rem;
+    padding: 10px 40px;
+    cursor: pointer;
+    box-shadow: 0 7px 20px 0 rgba(23, 104, 255, 0.74);
+    font-size: 1.2rem;
+    margin-top: 25px;
+  }
+  #button {
+    background: #f2f2f2;
+    padding: 50px;
+  }

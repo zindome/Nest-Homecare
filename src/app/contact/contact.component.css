@@ -1,0 +1,14 @@
+.circle {
+    max-width: 150px;
+    border-radius: 50%;
+    width: 100%;
+}
+.card {
+    border-radius: 8px;
+    border: 0;
+    padding: 1rem;
+    margin: 1rem auto;
+}
+small {
+    font-weight: 300;
+}

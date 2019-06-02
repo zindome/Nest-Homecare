@@ -1,0 +1,59 @@
+<nav class="navbar  navbar-expand-lg navbar-light bg-white">
+  <a class="navbar-brand" routerLink="/home">
+    <img src="../../assets/LOGO_NEST_HOMECARE_WHITE.svg" alt="the nest nursinghome" style="width: 150px;">
+  </a>
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+
+  </button>
+  <!-- data-toggle="collapse" data-target="#navbarSupportedContent" -->
+  <div class="collapse  navbar-collapse  " id="navbarSupportedContent" [ngClass]="{ 'show': navbarOpen }">
+    <ul class="navbar-nav  ml-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/home" (click)="toggleNavbar()">หน้าหลัก </a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/care" (click)="toggleNavbar()">หาผู้ดูแล </a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/price" (click)="toggleNavbar()">ค่าบริการ</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/consent" (click)="toggleNavbar()">เงื่อนไข</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/blogs" (click)="toggleNavbar()">บทความ</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/job" (click)="toggleNavbar()">หางาน </a>
+      </li>
+
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/contact" (click)="toggleNavbar()">ติดต่อ </a>
+      </li>
+
+
+      <!-- <ng-container *ngIf="authservice.islogin">
+        <li class="nav-item" routerLinkActive="active">
+         <a class="nav-link" routerLink="/user" (click)="toggleNavbar()">ผู้ใช้</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="login" (click)="authservice.logout() && toggleNavbar()">ออกจากระบบ</a>
+         </li>
+      </ng-container>
+
+      <ng-container *ngIf="!authservice.islogin">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/login" (click)="toggleNavbar()">เข้าสู่ระบบ</a>
+        </li>
+      </ng-container> -->
+
+
+      <!-- <div *ngIf="authservice.member | async; then authenticated else guest">
+
+
+        </div> -->
+    </ul>
+  </div>
+</nav>

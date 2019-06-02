@@ -1,0 +1,45 @@
+
+<div class="container shadow rounded p-4" *ngIf="contents">
+    <h1 class="text-center text-primary mt-3">{{contents.seo.metaTitle}}</h1>
+    <div class="row justify-content-center">
+    <div class="col-md-8 col-sm-10 col-12 col-lg-8 my-3">
+      <img src="{{contents.seo.ogImage}}" alt="{{contents.seo.metaTitle}}" class="w-100">
+    </div>
+  </div>
+    <div class="row justify-content-center p-3">
+        <share-buttons [theme]="'modern-dark'" [include]="['facebook','line']"
+        [show]="2" [size]="4" [showText]="true"
+          url="{{contents.seo.url}}"
+          [autoSetMeta]="false"></share-buttons>
+      </div>
+
+    <p class="text-center my-3">{{contents.intro}}</p>
+    <!-- สารบัญ -->
+    <ul class="nav flex-column card my-3">
+      <div class="card-header">เนื้อหา</div>
+      <div *ngFor="let link of contents.topic | keyvalue; let i = index">
+        <div *ngIf="link.value!=='' && link.key !== 'topic'">
+          <li class="nav-item" >
+          <a class="nav-link " pageScroll [attr.href]="'#'+link.key" [href]="'#'+link.key">{{link.value}}</a>
+        </li>
+        </div>
+      </div>
+    </ul>
+    <!-- content -->
+    <div class="row p-4 my-3">
+        <markdown class="variable-binding" [data]="contents.content"></markdown>
+
+      <div #yo></div>
+      <!-- <div innerHTML = "{{contents.content | mdToHtml}} "></div> -->
+    </div>
+    <div class="row justify-content-center">
+      <button class="btn btn-light mr-3" *ngFor="let tag of contents.tag">{{tag}}</button>
+    </div>
+    <div class="row justify-content-center p-3">
+        <share-buttons [theme]="'modern-dark'" [include]="['facebook','line']"
+        [show]="2" [size]="4" [showText]="true"
+          url="{{contents.seo.url}}"
+          [autoSetMeta]="false"></share-buttons>
+    </div>
+
+  </div>

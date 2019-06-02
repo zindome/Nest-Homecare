@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "nest-homecare",
+    "nest-homecare": "nest-homecare"
+  }
+}

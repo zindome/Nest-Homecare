@@ -1,0 +1,27 @@
+<div class="container">
+  <div *ngIf="blogs">
+    <div class="py-3">
+      <h1 class="text-center">บทความทั้งหมด</h1>
+    </div>
+    <!-- card blog -->
+    <div class="row justify-content-center">
+      <div class="col-md-10 col-sm-12 col-12 col-lg-8">
+        <div class="card mb-4 shadow border-0 " *ngFor="let blog of blogs">
+          <!--  -->
+          <img src="{{blog.seo.ogImage}}" [alt]="blog.seo.metaTitle" class="card-img-top">
+          <div class="card-body">
+            <h2 class="card-title">{{blog.seo.metaTitle}}</h2>
+            <p class="card-text">{{blog.intro}}</p>
+            <div class="row justify-content-end">
+              <button class="btn btn-primary mr-3" id="readmore"
+                [routerLink]="['/blogs', blog.slug]">อ่านเพิ่มเติม...</button>
+
+            </div>
+            <p class="card-text"><small class="text-muted">อัพเดทเมื่อ {{blog.date | date}}</small></p>
+          </div>
+        </div>
+        <!-- end  -->
+      </div>
+    </div>
+  </div>
+</div>
